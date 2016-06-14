@@ -22,6 +22,7 @@ public:
 	static Matrix3 CreateIdentity();
 	static Matrix3 CreateRotation(float angle);
 	static Matrix3 CreateScale(const Vector3& scale);
+	static Matrix3 CreateTranslation(const Vector3 value);
 	Matrix3 GetTranspose();
 
 private:

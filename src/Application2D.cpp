@@ -46,7 +46,7 @@ bool Application2D::update(float deltaTime) {
 	if (hasWindowClosed() || isKeyPressed(GLFW_KEY_ESCAPE))
 		return false;
 
-	//m_rotation += M_PI * deltaTime;
+	m_rotation += 3.141596f * deltaTime;
 
 	//for (int i = 0; i < 0; i++)
 	//{

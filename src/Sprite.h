@@ -1,8 +1,10 @@
 #pragma once
-class Sprite
+#include "Trees.h"
+class Sprite 
 {
 public:
 	Sprite();
 	~Sprite();
+
 };
 

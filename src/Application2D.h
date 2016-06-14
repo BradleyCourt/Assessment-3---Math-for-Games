@@ -24,4 +24,5 @@ protected:
 	Texture*		m_texture;
 	Font*			m_font;
 	float			deltatime;
+	float			m_rotation;
 };
