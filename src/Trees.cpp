@@ -1,7 +1,7 @@
 #include "trees.h"
 #include <vector>
 #include <iostream>
-#include "Planet.h"
+#include "GameObject.h"
 #include "Node.h"
 #include "SpriteBatch.h"
 
@@ -14,7 +14,7 @@ Tree::~Tree()
 	//delete &root;
 }
 
-Tree::Tree(Planet * p)
+Tree::Tree(GameObject * p)
 {
 	root = new Node(p);
 }
@@ -35,7 +35,7 @@ void Tree::Draw(SpriteBatch * s)
 	root->Draw(s);
 }
 
-bool Tree::AddChild(Planet * Children, Planet * Parent)
+bool Tree::AddChild(GameObject * Children, GameObject * Parent)
 {
 	Node* temp = (root->getNode(Parent));
 	if (temp == nullptr)

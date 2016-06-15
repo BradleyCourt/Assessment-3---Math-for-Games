@@ -4,22 +4,22 @@
 #include <fstream>
 
 class SpriteBatch;
-class Planet;
+class GameObject;
 class Node
 {
 public:
 	Node();
 	~Node();
-	Node(Planet* p);
+	Node(GameObject* p);
 	
 
-	Planet* data;
+	GameObject* data;
 	std::vector<Node*> m_Children = { nullptr };
 
-	Node* getNode(Planet* find);
+	Node* getNode(GameObject* find);
 	void update(float t);
 	void Draw(SpriteBatch* s);
-	void AddChild(Planet* Children);
+	void AddChild(GameObject* Children);
 		
 	void Save(std::fstream& file);
 	void Load(std::fstream& file);

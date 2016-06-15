@@ -5,16 +5,16 @@
 #include "Trees.h"
 class Texture;
 class SpriteBatch;
-class Planet
+class GameObject
 {
 
 	
 	
 public:
 	Matrix3 m_localTrans, m_globalTrans;
-	Planet* m_Parent;
-	Planet(Texture* tex, Planet* parent, float rotateSpeed, float rotateAngle, float Scale, float pX, float pY);
-	~Planet();
+	GameObject* m_Parent;
+	GameObject(Texture* tex, GameObject* parent, float rotateSpeed, float rotateAngle, float Scale, float pX, float pY);
+	~GameObject();
 	void update(float T);
 	void Draw(SpriteBatch* batch);
 

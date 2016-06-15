@@ -1,6 +1,6 @@
 #include "Node.h"
 #include "Trees.h"
-#include "Planet.h"
+#include "GameObject.h"
 #include "SpriteBatch.h"
 #include <fstream>
 
@@ -16,12 +16,12 @@ Node::~Node()
 
 
 
-Node::Node(Planet * p)
+Node::Node(GameObject * p)
 {
 	data = p;
 }
 
-Node * Node::getNode(Planet * find)
+Node * Node::getNode(GameObject * find)
 {
 	if (data == find)
 	{
@@ -64,7 +64,7 @@ void Node::Draw(SpriteBatch * s)
 	}
 }
 
-void Node::AddChild(Planet * Children)
+void Node::AddChild(GameObject * Children)
 {
 	if (m_Children.at(0) == nullptr)
 	{

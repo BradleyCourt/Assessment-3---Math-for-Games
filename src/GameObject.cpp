@@ -1,9 +1,9 @@
-#include "Planet.h"
+#include "GameObject.h"
 #include "Texture.h"
 #include "SpriteBatch.h"
 
 
-Planet::Planet(Texture * tex, Planet * parent, float rotateSpeed, float rotateAngle, float Scale, float pX, float pY)
+GameObject::GameObject(Texture * tex, GameObject * parent, float rotateSpeed, float rotateAngle, float Scale, float pX, float pY)
 {
 	m_tex = tex;
 	m_Parent = parent;
@@ -20,11 +20,11 @@ Planet::Planet(Texture * tex, Planet * parent, float rotateSpeed, float rotateAn
 	m_localTrans = m_translationTrans * m_rotationTrans * m_scaleTrans;
 }
 
-Planet::~Planet()
+GameObject::~GameObject()
 {
 }
 
-void Planet::update(float T)
+void GameObject::update(float T)
 {
 	Matrix3 m_rotationTrans;
 
@@ -45,7 +45,7 @@ void Planet::update(float T)
 	}
 }
 
-void Planet::Draw(SpriteBatch* batch)
+void GameObject::Draw(SpriteBatch* batch)
 {
 	batch->drawSpriteTransformed3x3(m_tex, m_globalTrans);
 }

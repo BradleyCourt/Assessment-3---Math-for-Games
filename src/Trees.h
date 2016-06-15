@@ -1,6 +1,6 @@
 #pragma once
 class Node;
-class Planet;
+class GameObject;
 class SpriteBatch;
 class Tree
 {
@@ -10,12 +10,12 @@ public:
 	Tree();
 
 	~Tree();
-	Tree(Planet* p);
+	Tree(GameObject* p);
 
 	bool isEmpty();
 	void updateAll(float t);
 	void Draw(SpriteBatch* s);
 
-	bool AddChild(Planet* Children, Planet* Parent);
+	bool AddChild(GameObject* Children, GameObject* Parent);
 
 };

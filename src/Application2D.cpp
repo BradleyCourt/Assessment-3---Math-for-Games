@@ -4,7 +4,7 @@
 #include "SpriteBatch.h"
 #include "Texture.h"
 #include "Font.h"
-#include "Planet.h"
+#include "GameObject.h"
 #include "Trees.h"
 #include "Node.h"
 #include <iostream>
@@ -16,9 +16,9 @@ Texture* texTrump;
 Texture* Money;
 Texture* Trump_Face;
 
-Planet* Trump;
-Planet* Trumps_son;
-Planet* Trump_NotBad;
+GameObject* Trump;
+GameObject* Trumps_son;
+GameObject* Trump_NotBad;
 Tree* TreeTrump;
 
 Application2D::Application2D() {
@@ -44,9 +44,9 @@ bool Application2D::startup() {
 	m_font = new Font("./bin/font/consolas.ttf", 32);
 
 
-	Trump = new Planet(texTrump, nullptr, 2, 2, .5, 640, 360);
-	Trumps_son = new Planet(Money, nullptr, -5, -5, 1, 0, 350);
-	Trump_NotBad = new Planet(Trump_Face, nullptr, -5, -5, 1, 0, 350);
+	Trump = new GameObject(texTrump, nullptr, 2, 2, .5, 640, 360);
+	Trumps_son = new GameObject(Money, nullptr, -5, -5, 1, 0, 350);
+	Trump_NotBad = new GameObject(Trump_Face, nullptr, -5, -5, 1, 0, 350);
 
 	TreeTrump = new Tree(Trump);
 	TreeTrump->AddChild(Trumps_son, Trump);
