@@ -1,20 +1,25 @@
 #pragma once
 #include "BaseApplication.h"
-#include "Vector.h"
+#include "Vector3.h"
 #include "Matrix3.h"
+#include "Trees.h"
 class Texture;
 class SpriteBatch;
 class Planet
 {
-private:
-	Planet* m_Parent;
-	float m_rotationSpeed, m_rotationAngle;
-	Matrix3 m_localTrans, m_globalTrans, m_scaleTrans, m_rotationTrans, m_translationTrans;
-	Texture* m_tex;
-	SpriteBatch* m_sBatch;
+
+	
+	
 public:
-	Planet(Texture* tex, Planet* parent, float rotateSpeed, float rotateAngle);
+	Matrix3 m_localTrans, m_globalTrans;
+	Planet* m_Parent;
+	Planet(Texture* tex, Planet* parent, float rotateSpeed, float rotateAngle, float Scale, float pX, float pY);
 	~Planet();
 	void update(float T);
+	void Draw(SpriteBatch* batch);
+
+	float m_rotationSpeed, m_rotationAngle;
+	Matrix3 m_scaleTrans, m_translationTrans, m_rotationTrans;
+	Texture* m_tex;
 };
 

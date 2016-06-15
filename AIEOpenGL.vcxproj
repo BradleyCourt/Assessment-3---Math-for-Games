@@ -16,6 +16,7 @@
     <ClCompile Include="src\gl_core_4_4.c" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Application2D.cpp" />
+    <ClCompile Include="src\Node.cpp" />
     <ClCompile Include="src\Planet.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Root.cpp" />
@@ -29,6 +30,7 @@
     <ClInclude Include="src\Font.h" />
     <ClInclude Include="src\gl_core_4_4.h" />
     <ClInclude Include="src\Application2D.h" />
+    <ClInclude Include="src\Node.h" />
     <ClInclude Include="src\Planet.h" />
     <ClInclude Include="src\Player.h" />
     <ClInclude Include="src\Root.h" />

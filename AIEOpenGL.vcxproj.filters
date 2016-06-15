@@ -54,6 +54,9 @@
     <ClCompile Include="src\Planet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gl_core_4_4.h">
@@ -71,9 +74,6 @@
     <ClInclude Include="src\Font.h">
       <Filter>BaseCode</Filter>
     </ClInclude>
-    <ClInclude Include="src\Trees.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Application2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -87,6 +87,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Planet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Trees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

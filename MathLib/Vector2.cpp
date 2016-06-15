@@ -31,28 +31,28 @@ const bool Vector2::operator==(const Vector2 & vecA)
 	return (m_x == vecA.m_x) && (m_y == vecA.m_y);
 }
 
-Vector2 & Vector2::operator*(const float f)
+Vector2 Vector2::operator*(const float f)
 {
 	return Vector2((m_x * f), (m_y * f));
 }
 
-Vector2 & Vector2::operator/(const float f)
+Vector2 Vector2::operator/(const float f)
 {
 	return Vector2((m_x / f), (m_y / f));
 }
 
-Vector2 & Vector2::operator/(const Vector2 & rhs)
+Vector2 Vector2::operator/(const Vector2 & rhs)
 {
 	return Vector2((m_x / rhs.m_x), (m_y / rhs.m_y));
 	// 90% sure is right
 }
 
-Vector2 & Vector2::operator+(const Vector2 & rhs)
+Vector2 Vector2::operator+(const Vector2 & rhs)
 {
 	return Vector2((m_x + rhs.m_x), (m_y + rhs.m_y));
 }
 
-Vector2 & Vector2::operator-(const Vector2 & rhs)
+Vector2 Vector2::operator-(const Vector2 & rhs)
 {
 	return Vector2((m_x - rhs.m_x), (m_y - rhs.m_y));
 }

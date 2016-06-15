@@ -47,29 +47,16 @@ Matrix3 Matrix3::CreateIdentity()
 
 Matrix3 Matrix3::CreateRotation(float angle)
 { 
-	Matrix3 newmat = CreateIdentity();
-	newmat.m_arr[0][0] = cosf(angle);
-	newmat.m_arr[0][1] = -sinf(angle);
-	newmat.m_arr[1][0] = cosf(angle);
-	newmat.m_arr[1][1] = sinf(angle);
-	return newmat;
+	return Matrix3(cosf(angle),sinf(angle),0,-sinf(angle),cosf(angle),0,0,0,1);
 }
 
 Matrix3 Matrix3::CreateScale(const Vector3 & scale)
 {
-	Matrix3 newmat = CreateIdentity();
-	newmat.m_arr[0][0] = scale.m_x;
-	newmat.m_arr[1][1] = scale.m_y;
-
-	return newmat;
+	return Matrix3(scale.m_x, 0,0,0,scale.m_y,0,0,0,scale.m_z);
 }
 Matrix3 Matrix3::CreateTranslation(const Vector3 value)
 {
-	Matrix3 newmat = CreateIdentity();
-	newmat.m_arr[2][0] = value.m_x;
-	newmat.m_arr[2][1] = value.m_y;
-	newmat.m_arr[2][2] = 1.00f;
-	return newmat;
+	return Matrix3(1,0,0,0,1,0,value.m_x,value.m_y,1);
 }
 
 Matrix3 Matrix3::GetTranspose()
